@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DanganController!{% endblock %}
+
+{% block body %}
+<h1 class="text-center text-danger">{{eleves.eleve}}</h1>
+
+<div class="container">
+
+  <div class="card mb-3">
+    <img src="{{eleves.photo}}" class="card-img-top"/>
+
+    <div class="card-body">
+      <h5 class="card-title text-center">Classe : {{eleves.classe}}</h5>
+      <p class="card-text text-center">Talent : {{eleves.talent}}</p>
+      <p class="card-text text-center">Mail : {{eleves.mail}}</p>
+    </div>
+  </div>
+{% endblock %}

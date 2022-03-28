@@ -1,0 +1,50 @@
+.water{
+    background-image:url(https://wallpapercave.com/wp/wp5565660.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img{
+    width: 100%;
+}
+
+p{
+    color: white;
+}
+
+.universe{
+    background-image:url(https://images.hdqwalls.com/wallpapers/dark-energie-4k-a1.jpg);
+}
+
+.forest{
+    background-image:url(https://wallpaperaccess.com/full/3693183.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b{
+    height: 1000px;
+}
+
+.enveloppe{
+    background-image:url(https://p4.wallpaperbetter.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.garden{
+    background-image:url(https://stm.ma/wp-content/uploads/2018/05/service-messagerie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.card{
+    border: solid 10px darkgray;
+}
+
+.voir{
+    margin-left: 30%;
+}
+
