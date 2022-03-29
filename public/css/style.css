@@ -8,12 +8,13 @@
     width: 100%;
 }
 
-p{
+.lorem{
     color: white;
 }
 
 .universe{
     background-image:url(https://images.hdqwalls.com/wallpapers/dark-energie-4k-a1.jpg);
+    padding-bottom: 20px;
 }
 
 .forest{
@@ -48,3 +49,10 @@ p{
     margin-left: 30%;
 }
 
+.fullmoon{
+    background-image:url(https://p4.wallpaperbetter.com/wallpaper/141/38/509/full-moon-lake-under-full-moon-wallpaper-preview.jpg);
+}
+
+.a{
+    color: white;
+}

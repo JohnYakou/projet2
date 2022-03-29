@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ path('app_home') }}">Kibô Gamine Gakuen</a>
+    <a class="navbar-brand text-white" href="{{ path('app_home') }}">Kibô Gamine Gakuen</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,19 +15,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_all_dangan') }}"
-            >Tous les élèves</a
+          <a class="nav-link a" href="{{ path('app_all_dangan') }}"
+            >Tous les élèves 78</a
+          >
+        </li>
+
+                <li class="nav-item">
+          <a class="nav-link a" href="{{ path('app_all_dangan_deux') }}"
+            >Tous les élèves 77</a
           >
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
+          <a class="nav-link a" href="{{ path('app_contact') }}">Contact</a>
         </li>
 
         {% if is_granted('ROLE_ADMIN') %}
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle a"
             href="#"
             id="navbarDropdown"
             role="button"
@@ -52,9 +58,16 @@
             {% endif %}
             <li>
               <a class="dropdown-item" href="{{ path('app_dangan') }}"
-                >Ajouter un élève</a
+                >Ajouter un élève 78</a
               >
             </li>
+
+            <li>
+              <a class="dropdown-item" href="{{ path('app_dangan_deux') }}"
+                >Ajouter un élève 77</a
+              >
+            </li>
+
             <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="{{ path('app_admin_all_dangan') }}"

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DanganController!{% endblock %}
+
+{% block body %}
+<section class="fullmoon">
+<h1 class="text-center text-danger">{{danganDeux.eleve}}</h1>
+
+<div class="container">
+
+  <div class="card mb-3">
+    <img src="{{danganDeux.photo}}" class="card-img-top"/>
+
+
+    <div class="card-body">
+      <h5 class="card-title text-center">Classe : {{danganDeux.classe}}</h5>
+      <p class="card-text text-center">Talent : {{danganDeux.talent}}</p>
+      <p class="card-text text-center">Mail : {{danganDeux.mail}}</p>
+    </div>
+  </div>
+  </section>
+{% endblock %}

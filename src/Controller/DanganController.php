@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Dangan;
 use App\Form\DanganType;
+use App\Entity\DanganDeux;
+use App\Form\DanganDeuxType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -66,8 +68,13 @@ class DanganController extends AbstractController
     public function admin(): Response{
         $eleves = $this->manager->getRepository(Dangan::class)->findAll();
 
+        // J'INSTANTIE DANGANDEUX
+        $danganDeux = new DanganDeux;
+        $danganDeux = $this->manager->getRepository(DanganDeux::class)->findAll();
+
         return $this->render('dangan/gestion.html.twig', [
             'eleves' => $eleves,
+            'danganDeux' => $danganDeux,
         ]);
     }
 
@@ -77,6 +84,18 @@ class DanganController extends AbstractController
     public function delete(Dangan $dangan): Response{
 
         $this->manager->remove($dangan);
+        $this->manager->flush();
+
+        return $this->redirectToRoute('app_admin_all_dangan');
+    }
+
+    // ----- DELETE DE DANGANDEUX -----
+    /**
+     * @Route("/admin/danganDeux/delete/{id}", name="app_admin_delete_danganDeux")
+     */
+    public function deleteDeux(DanganDeux $danganDeux): Response{
+
+        $this->manager->remove($danganDeux);
         $this->manager->flush();
 
         return $this->redirectToRoute('app_admin_all_dangan');
@@ -104,5 +123,28 @@ class DanganController extends AbstractController
         ]);       
         
 
+    }
+
+    // EDIT DE DANGANDEUX
+    /**
+     * @Route("/admin/danganDeux/edit/{id}", name="app_admin_edit_danganDeux")
+     */
+    public function editDeux(DanganDeux $danganDeux, Request $request): Response{
+
+        $formEdit = $this->createForm(DanganDeuxType::class, $danganDeux);
+
+        $formEdit->handleRequest($request);
+
+        if($formEdit->isSubmitted() && $formEdit->isValid()){
+            $this->manager->persist($danganDeux);
+            $this->manager->flush();        
+        
+            return $this->redirectToRoute('app_admin_all_dangan');
+        }
+       
+
+        return $this->render('dangan_deux/editDeux.html.twig', [
+            'modif' => $formEdit->createView(),
+        ]);       
     }
 }

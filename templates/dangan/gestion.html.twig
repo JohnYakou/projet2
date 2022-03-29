@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %} {% block title %}Hello DanganController!{%
+{% extends 'base.html.twig' %} {% block title %}Gérer les élèves{%
 endblock %} {% block body %}
 <section>
   <table class="table table-dark">
@@ -41,6 +41,36 @@ endblock %} {% block body %}
           <a
             class="btn btn-success"
             href="{{ path('app_admin_edit_dangan', { id: eleves.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+      {% for danganDeux in danganDeux %}
+      <tr>
+        <td scop="row">{{ danganDeux.id }}</td>
+        <td>{{ danganDeux.eleve }}</td>
+        <td>{{ danganDeux.classe }}</td>
+        <td>{{ danganDeux.talent }}</td>
+        <td>{{ danganDeux.mail }}</td>
+
+        <td>
+          <img style="width: 90px" src="{{ danganDeux.photo }}" />
+        </td>
+
+        <td>
+          <a
+            class="btn btn-danger"
+            href="{{ path('app_admin_delete_danganDeux', { id: danganDeux.id }) }}"
+            >Supprimer</a
+          >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_admin_edit_danganDeux', { id: danganDeux.id }) }}"
             >Modifier</a
           >
         </td>

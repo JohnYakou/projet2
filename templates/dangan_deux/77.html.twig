@@ -6,17 +6,17 @@
 
 <section class="universe">
     <div class='container'>
-        <h1 class="text-center text-white">78ème promotion</h1>
+        <h1 class="text-center text-white">77ème promotion</h1>
 
         <div class="row mt-5">
-            {% for eleves in eleves %}
+            {% for danganDeux in danganDeux %}
                 <div class="card col-md-3 mx-2 mt-3" style="width:19rem">
-                    <img class="card-img-top" style="height:350px" src="{{eleves.photo}}">
+                    <img class="card-img-top" style="height:350px" src="{{danganDeux.photo}}">
 
                     <div class="card-body">
-                        <h5 class="text-center card-title">{{eleves.eleve}}</h5>
+                        <h5 class="text-center card-title">{{danganDeux.eleve}}</h5>
 
-                        <a class="btn btn-primary voir" href="{{path('app_single_dangan', {id:eleves.id})}}">Voir plus</a>
+                        <a class="btn btn-primary voir" href="{{path('app_single2_dangan', {id:danganDeux.id})}}">Voir plus</a>
                     </div>
                 </div>
             {% endfor %}
