@@ -54,3 +54,8 @@
 .a{
     color: white;
 }
+
+.carousel{
+    height: 40rem;
+    width: 100%;
+}
